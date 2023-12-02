@@ -1,0 +1,73 @@
+.Mousyffects-root {
+  --Mousyffects-glow-color: 239, 42, 201; /* Default color, can be changed via extension settings */
+}
+
+.Mousyffects-glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--Mousyffects-glow-color));
+  pointer-events: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(var(--Mousyffects-glow-color));
+  opacity: 0.6;
+}
+
+.Mousyffects-star {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: var(--Mousyffects-star-size, 1rem);
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 0L9.89 5.17H15.56L10.835 8.36L12.725 13.53L8 10.34L3.275 13.53L5.165 8.36L0.44 5.17H6.11L8 0Z" fill="currentColor"/></svg>');
+  /* content: url('snowflake.svg'); */
+  color: #77dfedaf;
+}
+
+
+@keyframes Mousyffects-fall-1 {
+  0% {
+      transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+      opacity: 0;
+  }
+  5% {
+      transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+      opacity: 0;
+  }
+}
+
+@keyframes Mousyffects-fall-2 {
+  0% {
+      transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+      opacity: 0;
+  }
+  10% {
+      transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+      opacity: 0;
+  }
+}
+
+@keyframes Mousyffects-fall-3 {
+  0% {
+      transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+      opacity: 0;
+  }
+  15% {
+      transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+      opacity: 0;
+  }
+}
