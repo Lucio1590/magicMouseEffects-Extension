@@ -53,6 +53,7 @@
       star.style.animationName = config.animations[count++ % config.animations.length];
       star.style.animationDuration = ms(config.starAnimationDuration);
       star.style.zIndex = 9999
+      star.appendChild(document.createTextNode("❄️"));
 
       appendElement(star);
       removeElement(star, config.starAnimationDuration);
