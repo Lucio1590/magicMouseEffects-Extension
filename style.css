@@ -1,5 +1,5 @@
-.Mousyffects-root {
-  --Mousyffects-glow-color: 239, 42, 201; /* Default color, can be changed via extension settings */
+* {
+  --Mousyffects-glow-color: 20, 139, 237; /* Default color, can be changed via extension settings */
 }
 
 .Mousyffects-glow-point {
@@ -9,13 +9,14 @@
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: rgb(var(--Mousyffects-glow-color));
+  background: radial-gradient(circle, rgba(var(--Mousyffects-glow-color), 0.8) 0%, rgba(var(--Mousyffects-glow-color), 0.6) 50%, rgba(var(--Mousyffects-glow-color), 0.4) 100%);
   opacity: 0.6;
+  z-index: 998;
 }
 
 .Mousyffects-star {
   position: absolute;
-  z-index: 2;
+  z-index: 999;
   font-size: var(--Mousyffects-star-size, 1rem);
   animation-duration: 1500ms;
   animation-fill-mode: forwards;

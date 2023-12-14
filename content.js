@@ -46,8 +46,8 @@
             color = selectRandom(config.colors);
 
       star.className = "Mousyffects-star";
-      star.style.left = px(position.x);
-      star.style.top = px(position.y);
+      star.style.left = px(position.x + window.scrollX);
+      star.style.top = px(position.y + window.scrollY);
       star.style.fontSize = selectRandom(config.sizes);
       star.style.color = `rgb(${color})`;
       star.style.animationName = config.animations[count++ % config.animations.length];
@@ -63,8 +63,9 @@
       const glow = document.createElement("div");
 
       glow.className = "Mousyffects-glow-point";
-      glow.style.left = px(position.x);
-      glow.style.top = px(position.y);
+      glow.style.left = px(position.x + window.scrollX);
+      glow.style.top = px(position.y + window.scrollY);
+      
 
       appendElement(glow);
       removeElement(glow, config.glowDuration);
